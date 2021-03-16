@@ -63,12 +63,12 @@ return [
     ],
 
     // Enter your MySQL database credentials
-    // 'mysql'        => [
-    //     'host'     => '127.0.0.1',
-    //     'user'     => 'root',
-    //     'password' => 'root',
-    //     'database' => 'telegram_bot',
-    // ],
+    'mysql'        => [
+        'host'     => '127.0.0.1',
+        'user'     => 'motekari_forward_username',
+        'password' => 'J2DSRK$WYAcL',
+        'database' => 'motekari_forward',
+    ],
 
     // Logging (Debug, Error and Raw Updates)
     // 'logging'  => [

@@ -70,15 +70,15 @@ return [
     //     'database' => 'motekari_telegram_bot',
     // ],
 
-    'mysql'            => [
-        'host'         => '127.0.0.1',
-        //'port'         => 3306,           // optional
-        'user'         => 'root',
-        'password'     => 'root',
-        'database'     => 'telegram_bot',
-        //'table_prefix' => 'tbl_prfx_',    // optional
-        'encoding'     => 'utf8mb4',      // optional
-    ],
+    // 'mysql'            => [
+    //     'host'         => '127.0.0.1',
+    //     //'port'         => 3306,           // optional
+    //     'user'         => 'root',
+    //     'password'     => 'root',
+    //     'database'     => 'telegram_bot',
+    //     //'table_prefix' => 'tbl_prfx_',    // optional
+    //     'encoding'     => 'utf8mb4',      // optional
+    // ],
 
     // Logging (Debug, Error and Raw Updates)
     // 'logging'  => [

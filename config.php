@@ -63,11 +63,21 @@ return [
     ],
 
     // Enter your MySQL database credentials
-    'mysql'        => [
-        'host'     => '127.0.0.1',
-        'user'     => 'motekari_root',
-        'password' => '2rMv$pdCkQ3P',
-        'database' => 'motekari_telegram_bot',
+    // 'mysql'        => [
+    //     'host'     => '127.0.0.1',
+    //     'user'     => 'motekari_root',
+    //     'password' => '2rMv$pdCkQ3P',
+    //     'database' => 'motekari_telegram_bot',
+    // ],
+
+    'mysql'            => [
+        'host'         => '127.0.0.1',
+        //'port'         => 3306,           // optional
+        'user'         => 'root',
+        'password'     => 'root',
+        'database'     => 'telegram_bot',
+        //'table_prefix' => 'tbl_prfx_',    // optional
+        'encoding'     => 'utf8mb4',      // optional
     ],
 
     // Logging (Debug, Error and Raw Updates)

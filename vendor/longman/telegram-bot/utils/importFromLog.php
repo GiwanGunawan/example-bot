@@ -24,9 +24,9 @@ $updates_log_file_path = __DIR__ . '/updates.log';
 $mysql_credentials = [
     'host'     => 'localhost',
     'port'     => 3306, // optional
-    'user'     => 'dbuser',
-    'password' => 'dbpass',
-    'database' => 'dbname',
+    'user'     => 'motekari_root',
+    'password' => '2rMv$pdCkQ3P',
+    'database' => 'motekari_telegram_bot',
 ];
 
 try {

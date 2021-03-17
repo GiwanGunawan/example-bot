@@ -40,14 +40,13 @@ try {
         echo date('Y-m-d H:i:s') . ' - Failed to fetch updates' . PHP_EOL;
         echo $server_response->printError();
     }
-
 } catch (Longman\TelegramBot\Exception\TelegramException $e) {
     // Log telegram errors
     Longman\TelegramBot\TelegramLog::error($e);
 
     // Uncomment this to output any errors (ONLY FOR DEVELOPMENT!)
-    // echo $e;
+    echo $e;
 } catch (Longman\TelegramBot\Exception\TelegramLogException $e) {
     // Uncomment this to output log initialisation errors (ONLY FOR DEVELOPMENT!)
-    // echo $e;
+    echo $e;
 }

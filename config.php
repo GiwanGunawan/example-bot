@@ -44,7 +44,7 @@ return [
     'commands'     => [
         // Define all paths for your custom commands
         'paths'   => [
-            __DIR__ . '/Commands',
+            __DIR__ . '/Forward',
         ],
         // Here you can set any command-specific parameters
         'configs' => [

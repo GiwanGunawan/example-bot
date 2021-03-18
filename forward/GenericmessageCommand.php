@@ -46,7 +46,7 @@ class GenericmessageCommand extends SystemCommand
     /**
      * @var bool
      */
-    protected $need_mysql = false;
+    protected $need_mysql = true;
 
     /**
      * Command execute method if MySQL is required but not available

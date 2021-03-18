@@ -51,7 +51,7 @@ class SurveyCommand extends UserCommand
     /**
      * @var bool
      */
-    protected $need_mysql = false;
+    protected $need_mysql = true;
 
     /**
      * @var bool
@@ -122,7 +122,7 @@ class SurveyCommand extends UserCommand
                 $notes['name'] = $text;
                 $text          = '';
 
-                // No break!
+            // No break!
             case 1:
                 if ($text === '') {
                     $notes['state'] = 1;
@@ -137,7 +137,7 @@ class SurveyCommand extends UserCommand
                 $notes['surname'] = $text;
                 $text             = '';
 
-                // No break!
+            // No break!
             case 2:
                 if ($text === '' || !is_numeric($text)) {
                     $notes['state'] = 2;
@@ -155,7 +155,7 @@ class SurveyCommand extends UserCommand
                 $notes['age'] = $text;
                 $text         = '';
 
-                // No break!
+            // No break!
             case 3:
                 if ($text === '' || !in_array($text, ['M', 'F'], true)) {
                     $notes['state'] = 3;
@@ -177,7 +177,7 @@ class SurveyCommand extends UserCommand
 
                 $notes['gender'] = $text;
 
-                // No break!
+            // No break!
             case 4:
                 if ($message->getLocation() === null) {
                     $notes['state'] = 4;
@@ -199,7 +199,7 @@ class SurveyCommand extends UserCommand
                 $notes['longitude'] = $message->getLocation()->getLongitude();
                 $notes['latitude']  = $message->getLocation()->getLatitude();
 
-                // No break!
+            // No break!
             case 5:
                 if ($message->getPhoto() === null) {
                     $notes['state'] = 5;
@@ -214,7 +214,7 @@ class SurveyCommand extends UserCommand
                 $photo             = $message->getPhoto()[0];
                 $notes['photo_id'] = $photo->getFileId();
 
-                // No break!
+            // No break!
             case 6:
                 if ($message->getContact() === null) {
                     $notes['state'] = 6;
@@ -235,7 +235,7 @@ class SurveyCommand extends UserCommand
 
                 $notes['phone_number'] = $message->getContact()->getPhoneNumber();
 
-                // No break!
+            // No break!
             case 7:
                 $this->conversation->update();
                 $out_text = '/Survey result:' . PHP_EOL;

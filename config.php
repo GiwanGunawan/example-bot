@@ -64,10 +64,10 @@ return [
 
     // Enter your MySQL database credentials
     'mysql'        => [
-        'host'     => '127.0.0.1',
-        'user'     => 'motekari_root',
-        'password' => '2rMv$pdCkQ3P',
-        'database' => 'motekari_telegram_bot',
+        'host'     => 'localhost',
+        'user'     => 'motekari_test_username',
+        'password' => '90Z9#sKY^#vq',
+        'database' => 'motekari_test',
     ],
 
     // 'mysql'            => [

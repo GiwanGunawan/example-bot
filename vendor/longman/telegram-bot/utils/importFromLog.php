@@ -23,10 +23,10 @@ $updates_log_file_path = __DIR__ . '/updates.log';
 // Credentials of the database to import updates to.
 $mysql_credentials = [
     'host'     => 'localhost',
-    'port'     => 3306, // optional
-    'user'     => 'motekari_root',
-    'password' => '2rMv$pdCkQ3P',
-    'database' => 'motekari_telegram_bot',
+    //'port'     => 3306, // optional
+    'user'     => 'motekari_test_username',
+    'password' => '90Z9#sKY^#vq',
+    'database' => 'motekari_test',
 ];
 
 try {

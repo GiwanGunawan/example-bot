@@ -29,7 +29,7 @@ try {
     /**
      * Check `hook.php` for configuration code to be added here.
      */
-
+    $telegram->enableMySql($config['mysql']);
     // Handle telegram getUpdates request
     $server_response = $telegram->handleGetUpdates();
 

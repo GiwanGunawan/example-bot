@@ -35,7 +35,7 @@ try {
     $telegram->addCommandsPaths($config['commands']['paths']);
 
     // Enable MySQL if required
-    // $telegram->enableMySql($config['mysql']);
+    $telegram->enableMySql($config['mysql']);
 
     // Logging (Error, Debug and Raw Updates)
     // https://github.com/php-telegram-bot/core/blob/master/doc/01-utils.md#logging
@@ -65,7 +65,6 @@ try {
 
     // Handle telegram webhook request
     $telegram->handle();
-
 } catch (Longman\TelegramBot\Exception\TelegramException $e) {
     // Log telegram errors
     Longman\TelegramBot\TelegramLog::error($e);

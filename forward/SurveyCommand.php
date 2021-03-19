@@ -31,12 +31,12 @@ class SurveyCommand extends UserCommand
     /**
      * @var string
      */
-    protected $name = 'Testimoni VOT';
+    protected $name = 'survey';
 
     /**
      * @var string
      */
-    protected $description = 'Testimoni VOT';
+    protected $description = 'Survery for bot users';
 
     /**
      * @var string

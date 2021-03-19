@@ -33,7 +33,7 @@ return [
 
     // When using the getUpdates method, this can be commented out
     'webhook'      => [
-        'url' => 'https://example-bot.motekar.id/hook.php',
+        'url' => 'http://forwardexpansion.motekar.id/hook.php',
         // Use self-signed certificate
         // 'certificate'     => __DIR__ . '/path/to/your/certificate.crt',
         // Limit maximum number of connections

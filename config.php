@@ -65,9 +65,9 @@ return [
     // Enter your MySQL database credentials
     'mysql'        => [
         'host'     => 'localhost',
-        'user'     => 'motekari_test_username',
-        'password' => '90Z9#sKY^#vq',
-        'database' => 'motekari_test',
+        'user'     => 'motekari_forward_username',
+        'password' => 'w7H&@X~mFY{g',
+        'database' => 'motekari_forward',
     ],
 
     // 'mysql'            => [

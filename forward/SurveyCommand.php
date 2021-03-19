@@ -149,17 +149,17 @@ class SurveyCommand extends UserCommand
 
             case 1:
                 if ($text === '') {
-                    $notes['state'] = 6;
+                    $notes['state'] = 1;
                     $this->conversation->update();
 
-                    $data['text'] = 'Tulis testimoni disini:';
+                    $data['text'] = 'Tulis masukan disini:';
 
                     $result = Request::sendMessage($data);
                     break;
                 }
 
-                $notes['testimoni'] = $text;
-                $text             = '';
+                $notes['masukan'] = $text;
+                // $text             = '';
 
                 // No break!
 
@@ -176,6 +176,9 @@ class SurveyCommand extends UserCommand
 
                 $this->conversation->stop();
 
+                $result = Request::sendMessage($data);
+
+                $data['text'] = 'Terima kasih. Masukan dari anda akan kami pertimbangkan!';
                 $result = Request::sendMessage($data);
                 break;
         }

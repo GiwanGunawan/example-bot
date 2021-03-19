@@ -124,7 +124,7 @@ class SurveyCommand extends UserCommand
 
                 // // No break!
 
-                if ($text === '' || !in_array($text, ['M', 'F'], true)) {
+                if ($text === '' || !in_array($text, ['UBIS', 'WITEL'], true)) {
                     $notes['state'] = 0;
                     $this->conversation->update();
 

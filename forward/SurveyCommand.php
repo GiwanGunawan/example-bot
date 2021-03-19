@@ -149,7 +149,7 @@ class SurveyCommand extends UserCommand
 
             case 1:
                 if ($text === '') {
-                    $notes['state'] = 1;
+                    $notes['state'] = 6;
                     $this->conversation->update();
 
                     $data['text'] = 'Tulis testimoni disini:';

@@ -25,7 +25,7 @@
 
 return [
     // Add you bot's API key and name
-    'api_key'      => '1676765529:AAG1WXeh36ba3vYgUU5ygZHU6HxcsmUPoXk',
+    'api_key'      => '1676765529:AAGCBWww_CvatUQI2MBTGAGLfWXlfixWS68',
     'bot_username' => 'forwardTelkom_bot', // Without "@"
 
     // [Manager Only] Secret key required to access the webhook

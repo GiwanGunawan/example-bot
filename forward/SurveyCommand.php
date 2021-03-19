@@ -31,6 +31,7 @@ class SurveyCommand extends UserCommand
     /**
      * @var string
      */
+    // protected $name = 'survey';
     protected $name = 'vot';
 
     /**
@@ -41,12 +42,14 @@ class SurveyCommand extends UserCommand
     /**
      * @var string
      */
+    // protected $usage = '/survey';
     protected $usage = '/vot';
 
     /**
      * @var string
      */
-    protected $version = '0.4.0';
+    // protected $version = '0.4.0';
+    protected $version = '1.0.0';
 
     /**
      * @var bool

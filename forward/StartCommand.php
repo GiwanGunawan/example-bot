@@ -66,7 +66,7 @@ class StartCommand extends SystemCommand
 
         return $this->replyToChat(
             'Hi Kak! Selamat datang di "Voice of Technician (VOT)"' . PHP_EOL .
-                'Ketik /vot untuk memberikan masukan.' .
+                'Ketik /vot untuk memberikan masukan.' . PHP_EOL .
                 'Ketik /cancel untuk membatalkan.'
         );
     }

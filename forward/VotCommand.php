@@ -136,9 +136,9 @@ class VotCommand extends UserCommand
                         ->setOneTimeKeyboard(true)
                         ->setSelective(true);
 
-                    $data['text'] = 'Mau ditujukan kepada siapa? silahkan pilih opsi berikut:';
+                    $data['text'] = 'Mau ditujukan kepada siapa?';
                     if ($text !== '') {
-                        $data['text'] = 'klik keyboardnya ya!';
+                        $data['text'] = 'jangan ketik manual, klik keyboardnya ya!';
                     }
 
                     $result = Request::sendMessage($data);
@@ -155,7 +155,7 @@ class VotCommand extends UserCommand
                     $notes['state'] = 1;
                     $this->conversation->update();
 
-                    $data['text'] = 'Tulis masukan disini:';
+                    $data['text'] = 'Tulis masukan disini dibawah sini ya Kak ^_^ ';
 
                     $result = Request::sendMessage($data);
                     break;
@@ -181,7 +181,7 @@ class VotCommand extends UserCommand
 
                 $result = Request::sendMessage($data);
 
-                $data['text'] = 'Terima kasih. Masukan dari anda akan kami pertimbangkan!';
+                $data['text'] = 'Makasih. Masukan dari Kaka akan kami pertimbangkan lho!';
                 $result = Request::sendMessage($data);
                 break;
         }

@@ -41,7 +41,7 @@ class SurveyCommand extends UserCommand
     /**
      * @var string
      */
-    protected $usage = '/testimoni';
+    protected $usage = '/survey';
 
     /**
      * @var string

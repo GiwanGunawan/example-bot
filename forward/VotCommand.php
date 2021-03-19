@@ -168,7 +168,7 @@ class VotCommand extends UserCommand
 
             case 2:
                 $this->conversation->update();
-                $out_text = '/Survey result:' . PHP_EOL;
+                $out_text = '/vot result:' . PHP_EOL;
                 unset($notes['state']);
                 foreach ($notes as $k => $v) {
                     $out_text .= PHP_EOL . ucfirst($k) . ': ' . $v;

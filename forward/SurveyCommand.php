@@ -109,20 +109,43 @@ class SurveyCommand extends UserCommand
         // Every time a step is achieved the state is updated
         switch ($state) {
             case 0:
-                if ($text === '') {
-                    $notes['state'] = 0;
+                // if ($text === '') {
+                //     $notes['state'] = 0;
+                //     $this->conversation->update();
+
+                //     $data['text'] = 'Type your name:';
+
+                //     $result = Request::sendMessage($data);
+                //     break;
+                // }
+
+                // $notes['name'] = $text;
+                // $text          = '';
+
+                // // No break!
+
+                if ($text === '' || !in_array($text, ['M', 'F'], true)) {
+                    $notes['state'] = 3;
                     $this->conversation->update();
 
-                    $data['text'] = 'Type your name:';
+                    $data['reply_markup'] = (new Keyboard(['M', 'F']))
+                        ->setResizeKeyboard(true)
+                        ->setOneTimeKeyboard(true)
+                        ->setSelective(true);
+
+                    $data['text'] = 'Select your gender:';
+                    if ($text !== '') {
+                        $data['text'] = 'Choose a keyboard option to select your gender';
+                    }
 
                     $result = Request::sendMessage($data);
                     break;
                 }
 
-                $notes['name'] = $text;
-                $text          = '';
+                $notes['gender'] = $text;
 
-            // No break!
+                // No break!
+
             case 1:
                 if ($text === '') {
                     $notes['state'] = 1;
@@ -137,7 +160,7 @@ class SurveyCommand extends UserCommand
                 $notes['surname'] = $text;
                 $text             = '';
 
-            // No break!
+                // No break!
             case 2:
                 if ($text === '' || !is_numeric($text)) {
                     $notes['state'] = 2;
@@ -155,7 +178,7 @@ class SurveyCommand extends UserCommand
                 $notes['age'] = $text;
                 $text         = '';
 
-            // No break!
+                // No break!
             case 3:
                 if ($text === '' || !in_array($text, ['M', 'F'], true)) {
                     $notes['state'] = 3;
@@ -177,7 +200,7 @@ class SurveyCommand extends UserCommand
 
                 $notes['gender'] = $text;
 
-            // No break!
+                // No break!
             case 4:
                 if ($message->getLocation() === null) {
                     $notes['state'] = 4;
@@ -199,7 +222,7 @@ class SurveyCommand extends UserCommand
                 $notes['longitude'] = $message->getLocation()->getLongitude();
                 $notes['latitude']  = $message->getLocation()->getLatitude();
 
-            // No break!
+                // No break!
             case 5:
                 if ($message->getPhoto() === null) {
                     $notes['state'] = 5;
@@ -214,7 +237,7 @@ class SurveyCommand extends UserCommand
                 $photo             = $message->getPhoto()[0];
                 $notes['photo_id'] = $photo->getFileId();
 
-            // No break!
+                // No break!
             case 6:
                 if ($message->getContact() === null) {
                     $notes['state'] = 6;
@@ -235,7 +258,7 @@ class SurveyCommand extends UserCommand
 
                 $notes['phone_number'] = $message->getContact()->getPhoneNumber();
 
-            // No break!
+                // No break!
             case 7:
                 $this->conversation->update();
                 $out_text = '/Survey result:' . PHP_EOL;

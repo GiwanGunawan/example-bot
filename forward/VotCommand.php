@@ -26,13 +26,13 @@ use Longman\TelegramBot\Entities\ServerResponse;
 use Longman\TelegramBot\Exception\TelegramException;
 use Longman\TelegramBot\Request;
 
-class SurveyCommand extends UserCommand
+class VotCommand extends UserCommand
 {
     /**
      * @var string
      */
-    protected $name = 'survey';
-    // protected $name = 'vot';
+    // protected $name = 'survey';
+    protected $name = 'vot';
 
     /**
      * @var string
@@ -42,8 +42,8 @@ class SurveyCommand extends UserCommand
     /**
      * @var string
      */
-    protected $usage = '/survey';
-    // protected $usage = '/vot';
+    // protected $usage = '/survey';
+    protected $usage = '/vot';
 
     /**
      * @var string

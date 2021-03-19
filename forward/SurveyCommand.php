@@ -124,11 +124,11 @@ class SurveyCommand extends UserCommand
 
                 // // No break!
 
-                if ($text === '' || !in_array($text, ['UBIS', 'WITEL'], true)) {
+                if ($text === '' || !in_array($text, ['UBIS', 'WITEL', 'DATEL', 'GM'], true)) {
                     $notes['state'] = 0;
                     $this->conversation->update();
 
-                    $data['reply_markup'] = (new Keyboard(['UBIS', 'WITEL']))
+                    $data['reply_markup'] = (new Keyboard(['UBIS', 'WITEL', 'DATEL', 'GM']))
                         ->setResizeKeyboard(true)
                         ->setOneTimeKeyboard(true)
                         ->setSelective(true);
@@ -143,6 +143,7 @@ class SurveyCommand extends UserCommand
                 }
 
                 $notes['kepada'] = $text;
+                $text             = '';
 
                 // No break!
 
@@ -151,13 +152,13 @@ class SurveyCommand extends UserCommand
                     $notes['state'] = 1;
                     $this->conversation->update();
 
-                    $data['text'] = 'Type your surname:';
+                    $data['text'] = 'Tulis testimoni disini:';
 
                     $result = Request::sendMessage($data);
                     break;
                 }
 
-                $notes['surname'] = $text;
+                $notes['testimoni'] = $text;
                 $text             = '';
 
                 // No break!

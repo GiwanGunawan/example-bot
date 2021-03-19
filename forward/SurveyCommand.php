@@ -31,8 +31,8 @@ class SurveyCommand extends UserCommand
     /**
      * @var string
      */
-    // protected $name = 'survey';
-    protected $name = 'start';
+    protected $name = 'survey';
+    // protected $name = 'start';
 
     /**
      * @var string

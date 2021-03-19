@@ -125,24 +125,24 @@ class SurveyCommand extends UserCommand
                 // // No break!
 
                 if ($text === '' || !in_array($text, ['M', 'F'], true)) {
-                    $notes['state'] = 3;
+                    $notes['state'] = 0;
                     $this->conversation->update();
 
-                    $data['reply_markup'] = (new Keyboard(['M', 'F']))
+                    $data['reply_markup'] = (new Keyboard(['UBIS', 'WITEL']))
                         ->setResizeKeyboard(true)
                         ->setOneTimeKeyboard(true)
                         ->setSelective(true);
 
-                    $data['text'] = 'Select your gender:';
+                    $data['text'] = 'Mau ditujukan kepada:';
                     if ($text !== '') {
-                        $data['text'] = 'Choose a keyboard option to select your gender';
+                        $data['text'] = 'klik keyboardnya ya!';
                     }
 
                     $result = Request::sendMessage($data);
                     break;
                 }
 
-                $notes['gender'] = $text;
+                $notes['kepada'] = $text;
 
                 // No break!
 

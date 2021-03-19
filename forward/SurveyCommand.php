@@ -31,7 +31,7 @@ class SurveyCommand extends UserCommand
     /**
      * @var string
      */
-    protected $name = 'survey';
+    protected $name = 'vot';
 
     /**
      * @var string
@@ -41,7 +41,7 @@ class SurveyCommand extends UserCommand
     /**
      * @var string
      */
-    protected $usage = '/survey';
+    protected $usage = '/vot';
 
     /**
      * @var string
@@ -133,7 +133,7 @@ class SurveyCommand extends UserCommand
                         ->setOneTimeKeyboard(true)
                         ->setSelective(true);
 
-                    $data['text'] = 'Mau ditujukan kepada:';
+                    $data['text'] = 'Mau ditujukan kepada siapa? silahkan pilih opsi berikut:';
                     if ($text !== '') {
                         $data['text'] = 'klik keyboardnya ya!';
                     }

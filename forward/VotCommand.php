@@ -127,11 +127,11 @@ class VotCommand extends UserCommand
 
                 // // No break!
 
-                if ($text === '' || !in_array($text, ['UBIS', 'WITEL', 'DATEL', 'GM'], true)) {
+                if ($text === '' || !in_array($text, ['UBIS', 'DATEL', 'WITEL', 'GM'], true)) {
                     $notes['state'] = 0;
                     $this->conversation->update();
 
-                    $data['reply_markup'] = (new Keyboard(['UBIS', 'WITEL', 'DATEL', 'GM']))
+                    $data['reply_markup'] = (new Keyboard(['UBIS', 'DATEL', 'WITEL', 'GM']))
                         ->setResizeKeyboard(true)
                         ->setOneTimeKeyboard(true)
                         ->setSelective(true);
@@ -168,7 +168,7 @@ class VotCommand extends UserCommand
 
             case 2:
                 $this->conversation->update();
-                $out_text = '/vot result:' . PHP_EOL;
+                $out_text = '/vot hasil:' . PHP_EOL;
                 unset($notes['state']);
                 foreach ($notes as $k => $v) {
                     $out_text .= PHP_EOL . ucfirst($k) . ': ' . $v;
@@ -181,7 +181,7 @@ class VotCommand extends UserCommand
 
                 $result = Request::sendMessage($data);
 
-                $data['text'] = 'Makasih. Masukan dari Kaka akan kami pertimbangkan lho!';
+                $data['text'] = 'Input /vot berhasil. Makasi ya Kak! Masukan dari Kaka akan kami pertimbangkan lho!';
                 $result = Request::sendMessage($data);
                 break;
         }

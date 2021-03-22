@@ -181,7 +181,7 @@ class VotCommand extends UserCommand
 
                 $result = Request::sendMessage($data);
 
-                $data['text'] = 'Input /vot berhasil. Makasi ya Kak! Masukan dari Kaka akan kami pertimbangkan lho!';
+                $data['text'] = 'Input /vot berhasil. Makasi ya Kak! Masukan dari Kaka akan kami pertimbangkan lhoo..';
                 $result = Request::sendMessage($data);
                 break;
         }

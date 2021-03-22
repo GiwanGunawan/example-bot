@@ -168,7 +168,7 @@ class VotCommand extends UserCommand
 
             case 2:
                 $this->conversation->update();
-                $out_text = '/vot hasil:' . PHP_EOL;
+                $out_text = 'Input /vot berhasil:' . PHP_EOL;
                 unset($notes['state']);
                 foreach ($notes as $k => $v) {
                     $out_text .= PHP_EOL . ucfirst($k) . ': ' . $v;
@@ -181,7 +181,7 @@ class VotCommand extends UserCommand
 
                 $result = Request::sendMessage($data);
 
-                $data['text'] = 'Input /vot berhasil. Makasi ya Kak! Masukan dari Kaka akan kami pertimbangkan lhoo..';
+                $data['text'] = 'Makasi ya Kak! Masukan dari Kaka akan kami pertimbangkan lhoo..';
                 $result = Request::sendMessage($data);
                 break;
         }
